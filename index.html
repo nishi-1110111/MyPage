@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Nishi1110111's Page</title>
+    <style>
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 3s ease forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      footer {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="fade-in">
+    <h1 style="text-align: center; font-size: 40px;"><strong>Nishi1110111's page</strong></h1>
+    <p style="text-align: center;">~~~~~~~~(Just a student)~~~~~~~~</p>
+    <p style="text-align: center; margin-top: -15px;">Ciallo～(∠·ω< )⌒★</p>
+    <div style="display: flex; justify-content: center;">
+      <a href="https://twitter.com/Nishi265528"><img src="assets/icons/x.svg" alt="X" width=20px></a>
+      <a style="margin-left: 10px;" href="https://t.me/nishi_1110111"><img src=assets/icons/Telegram.svg alt="Telegram" width=20px></a>
+      <a style="margin-left: 10px;" href="https://github.com/nishi-1110111"><img id="start1" src="assets/icons/GitHubDark.svg" alt="GitHub" width=20px></a>
+      <a style="margin-left: 10px;" href="https://github.com/nishi1110111"><img id="start2" src="assets/icons/GitHubDark.svg" alt="GitHub" width=20px></a>
+      <a style="margin-left: 10px;" href="https://www.instagram.com/nishi1110111_1"><img src="assets/icons/Instagram.svg" alt="Instagram" width=20px></a>
+      <a style="margin-left: 10px;" href="https://www.tiktok.com/@nishi_1110111_1"><img src="assets/icons/TikTok.svg" alt="TikTok" width=20px></a>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <div style="text-align: center;">
+        <img id="end1" style="margin-top: 20px;" src="https://github-readme-stats.vercel.app/api?username=nishi-1110111&show_icons=true&include_all_commits=true&show=reviews,discussions_started,prs_merged,prs_merged_percentage&theme=light" alt="GitHub Stats" width=180px>
+        <p style="margin-top: 0px;">(Main account)</p>
+      </div>
+      <div style="text-align: center;">
+        <img id="end2" style="margin-top: 20px; margin-left: 10px;" src="https://github-readme-stats.vercel.app/api?username=nishi1110111&show_icons=true&include_all_commits=true&show=reviews,discussions_started,prs_merged,prs_merged_percentage&theme=light" alt="GitHub Stats" width=180px>
+        <p style="margin-top: 0px;">(Alt account)</p>
+      </div>
+    </div>
+    <footer style="text-align:center; font-size:14px; color:#888;">
+      <p>© 2025 Nishi1110111. All rights reserved.</p>
+      <p style="margin-top: -15px;">
+        <a href="#top">Back to Top ↑</a>
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/leader-line">
+    </script>
+    <script>
+      new LeaderLine(
+      LeaderLine.pointAnchor(document.getElementById('start1'), { x: '50%', y: '120%' }),
+      LeaderLine.pointAnchor(document.getElementById('end1'), { x: '50%', y: '-5%' }),
+        {
+          path: 'grid',
+          startPlug: 'disc',
+          endPlug: 'arrow',
+          startSocketGravity: [0, 1],
+          endSocketGravity: [0, -1],
+          color: 'black',
+          size: 1
+        }
+      );
+      new LeaderLine(
+      LeaderLine.pointAnchor(document.getElementById('start2'), { x: '50%', y: '120%' }),
+      LeaderLine.pointAnchor(document.getElementById('end2'), { x: '50%', y: '-5%' }),
+        {
+          path: 'grid',
+          startPlug: 'disc',
+          endPlug: 'arrow',
+          startSocketGravity: [0, 1],
+          endSocketGravity: [0, -1],
+          color: 'black',
+          size: 1
+        }
+      );
+    </script>
+  </body>
+</html>

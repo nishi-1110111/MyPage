@@ -22,12 +22,28 @@
         color: inherit;
         text-decoration: underline;
       }
+      .animated-text span {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: popUp 0.5s ease-out forwards;
+      }
+      @keyframes popUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animated-text {
+        font-size: 24px;
+        margin: 20px 0;
+      }
     </style>
   </head>
   <body class="fade-in">
-    <h1 style="text-align: center; font-size: 40px;"><strong>Nishi1110111's page</strong></h1>
-    <p style="text-align: center;">~~~~~~~~(Just a student)~~~~~~~~</p>
-    <p style="text-align: center; margin-top: -15px; font-size: 8px;">Ciallo～(∠·ω< )⌒★</p>
+    <h1 class="animated-text" style="text-align: center; font-size: 40px;"><strong>Nishi1110111's page</strong></h1>
+    <p class="animated-text" style="text-align: center;">~~~~~~~~(Just a student)~~~~~~~~</p>
+    <p class="animated-text" style="text-align: center; margin-top: -15px; font-size: 8px;">Ciallo～(∠·ω< )⌒★</p>
     <div style="display: flex; justify-content: center;">
       <a href="https://twitter.com/Nishi265528"><img src="assets/icons/X.svg" alt="X" width=20px></a>
       <a style="margin-left: 30px;" href="https://t.me/nishi_1110111"><img src=assets/icons/Telegram.svg alt="Telegram" width=20px></a>
@@ -39,15 +55,15 @@
     <div style="display: flex; justify-content: center;">
       <div style="text-align: center;">
         <img id="end1" style="margin-top: 20px;" src="https://github-readme-stats.vercel.app/api?username=nishi-1110111&show_icons=true&include_all_commits=true&show=reviews,discussions_started,prs_merged,prs_merged_percentage&theme=light" alt="GitHub Stats" width=180px>
-        <p style="margin-top: 0px; font-size: 10px;">(Main account)</p>
+        <p class="animated-text" style="margin-top: 0px; font-size: 10px;">(Main account)</p>
       </div>
       <div style="text-align: center;">
         <img id="end2" style="margin-top: 20px; margin-left: 10px;" src="https://github-readme-stats.vercel.app/api?username=nishi1110111&show_icons=true&include_all_commits=true&show=reviews,discussions_started,prs_merged,prs_merged_percentage&theme=light" alt="GitHub Stats" width=180px>
-        <p style="margin-top: 0px; font-size: 10px;">(Alt account)</p>
+        <p class="animated-text" style="margin-top: 0px; font-size: 10px;">(Alt account)</p>
       </div>
     </div>
     <footer style="text-align:center; font-size:8px; color:#888;">
-      <p style="font-size: 12px">还在施工咕咕咕(,,・ω・,,) </p>
+      <p class="animated-text" style="font-size: 12px">还在施工咕咕咕(,,・ω・,,) </p>
       <hr>
       <p>Powered by GitHub Pages.</p>
       <p style="font-size:6px; color:#aaa; margin-top: -8px">All social media logos and icons displayed on this page are either sourced from official brand resources or follow their publicly available brand guidelines. Some icons may originate from trusted third-party sources such as open-source icon libraries. These icons are used strictly for non-commercial, personal display or linking purposes. No affiliation, endorsement, or partnership with any brand is implied. All trademarks and copyrights belong to their respective owners.</p>
@@ -85,6 +101,16 @@
           size: 1
         }
       );
+      document.querySelectorAll('.animated-text').forEach(element => {
+        const text = element.textContent;
+        element.textContent = '';
+        [...text].forEach((char, index) => {
+          const span = document.createElement('span');
+          span.innerHTML = (char === ' ') ? '&nbsp;' : char;
+          span.style.animationDelay = `${index * 0.05}s`;
+          element.appendChild(span);
+        });
+      });
     </script>
   </body>
 </html>
